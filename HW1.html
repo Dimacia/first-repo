@@ -1,0 +1,23 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+//сделал загадку с одним вариантом ответа
+
+let answer = "кольцо";
+let userAnswer = prompt ("Что у хоббита в карманцах?");//ввод ответа
+let maxTryCount = 2;
+let guessCount = 0;
+
+for (tryCount = maxTryCount - 1; tryCount > 0; tryCount--) {
+	if (userAnswer == answer) {
+		alert ("Поздравляю! Вы победили!");
+		guessCount ++;
+		break;
+		} 
+	userAnswer = prompt ("Неверно, попробуте ещё раз.");
+}
+
+if (tryCount == 0){ //tryCount уменьшается на единицу каждую итерацию до нуля
+	alert ("Вы проиграли :(")}
+alert ("Вы отгадали " + guessCount + " из 3 загадок.")
+</script> 
