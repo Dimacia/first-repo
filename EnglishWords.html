@@ -1,0 +1,18 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+var words = [
+	["food", "еда"],
+	["fish", "рыба"],
+	];
+
+while (words.length != 0){ //следи за скобками в циклах
+	var i = parseInt(Math.random() * words.length); //parseInt превращает в целое число, переменную
+	var userTranslate = prompt ("Как переводится слово " + words [i][0]); //при выборе элемента только квадратные скобки, это не функция!
+	if (userTranslate == words[i][1]){
+	alert("Правильно!");
+	words.splice(i,1); // удалить один элемент начиная с i
+	};
+}
+alert ("Поздравляю, вы знаете все слова!")
+</script>
